@@ -1,0 +1,403 @@
+/* General Styles */
+.app-container {
+  width: 90%;
+  max-width: 1200px;
+  margin-top: -100px;
+  padding: 160px;
+  background-color: #f4f7fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  font-size: 2rem; /* You can adjust this size as needed */
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center; /* Center-align the title */
+  margin-top: 20px; /* Optional: adjust top margin for better spacing */
+  border-bottom: 3px solid #070707; /* Adds a blue underline */
+  padding-bottom: 10px; /* Optional: adds space between text and underline */
+}
+
+
+
+/* Form Container */
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Profile Cards */
+.profile-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.profile-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Buttons */
+button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+/* Center the Add Profile button */
+.add-profile-btn {
+  background-color: #26afe1;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 300px;  /* Set the width to auto */
+  cursor: pointer;
+  margin: 30px auto;  /* Auto margin on left and right to center */
+  display: block;  /* Make it a block-level element */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-profile-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.add-profile-btn:focus {
+  outline: none;
+}
+
+
+.add-profile-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.add-profile-btn:focus {
+  outline: none;
+}
+
+/* Input Fields */
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Form-specific Inputs */
+/* Ensure the inputs stay within the profile-card container */
+.form-container input,
+.form-container textarea,
+.form-container button {
+  background-color: #f9fafc;
+  border: 1px solid #dcdfe3;
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding and border are within width */
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Prevent resizing or change in size on focus */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff; /* Border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* Light blue glow */
+  padding: 12px 15px; /* Make sure padding stays the same */
+  width: 100%; /* Ensure the width remains consistent */
+}
+
+/* Profile-specific styles for input fields */
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-sizing: border-box; /* This ensures padding + border is within width */
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+
+.profile-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Ensure it doesn't exceed container width */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+/* Ensure form-container is also properly contained */
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  width: 100%; /* Make sure the form fits within the container */
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.form-container input:focus,
+.form-container textarea:focus,
+.form-container button:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  width: auto;
+}
+
+.form-container textarea {
+  height: 500px;
+  resize: vertical;
+}
+
+.form-container button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: auto;  /* Set the width to auto */
+  margin: 1px auto;  /* Auto margin on left and right to center */
+  display: block;  /* Make it a block-level element */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.form-container button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Profile Grid */
+.profiles-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .add-profile-btn {
+    width: 100%;
+  }
+
+  .profiles-list {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+
+  .profile-card {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .profile-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .profile-card h2 {
+    font-size: 1rem;
+  }
+
+  .profile-card p {
+    font-size: 0.9rem;
+  }
+
+  .map {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  .profile-card {
+    padding: 10px;
+  }
+
+  .profile-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile-card h2 {
+    font-size: 0.9rem;
+  }
+
+  .profile-card p {
+    font-size: 0.8rem;
+  }
+
+  .form-container input,
+  .form-container textarea,
+  .form-container button {
+    font-size: 14px;
+    width: auto;
+  }
+
+  .map {
+    height: 250px;
+  }
+}
+
+/* Map Container */
+.map-container {
+  margin-top: 30px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hover effects for action buttons */
+.view-map-btn,
+.edit-btn
+{
+  background-color: #28a745;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 10px;
+}
+
+
+.delete-btn {
+  background-color: #ef1f1f;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 10px;
+}
+
+.view-map-btn:hover,
+.edit-btn:hover,
+.delete-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
