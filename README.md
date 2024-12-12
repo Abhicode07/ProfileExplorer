@@ -50,8 +50,7 @@ Follow these steps to set up and run the project locally:
 
 - **Frontend**: React.js, Tailwind CSS
 - **Backend**: Node.js (if applicable)
-- **Database**: MongoDB/MySQL (if applicable)
-- **Mapping Library**: Leaflet/Google Maps API
+- **Mapping Library**: Leaflet API
 
 ## Project Structure
 
