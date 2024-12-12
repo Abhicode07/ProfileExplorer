@@ -24,7 +24,7 @@ const App = () => {
         name: 'Abhishek Bhavsar',
         description: 'Software Engineer',
         photo: 'https://plus.unsplash.com/premium_vector-1727955579176-073f1c85dcda?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        address: { lat: 20.874917, lng: 75.111222 }, // Updated location to Parola, Maharashtra, India
+        address: { lat: 20.874917, lng: 75.111222 },
       },
       {
         id: 2,
@@ -90,21 +90,20 @@ const App = () => {
 
   const handleAddProfile = (e) => {
     e.preventDefault();
-    // Reset the form fields to the default state when adding a new profile
     setNewProfile({
       name: '',
       description: '',
       photo: '',
       address: { lat: '', lng: '' },
     });
-    setIsEditing(false);  // Reset editing state
-    setShowAddForm(true);  // Show the form
+    setIsEditing(false);
+    setShowAddForm(true);
   };
   
   const handleEditProfile = (profile) => {
-    setNewProfile(profile); // Load the profile for editing
-    setIsEditing(true); // Set editing flag to true
-    setShowAddForm(true); // Show the form
+    setNewProfile(profile);
+    setIsEditing(true);
+    setShowAddForm(true);
     setTimeout(() => {
       if (formSectionRef.current) {
         formSectionRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -132,22 +131,22 @@ const App = () => {
       alert('All fields are required!');
     }
   };
-  
 
   const handleDeleteProfile = (id) => {
     setProfiles(profiles.filter((profile) => profile.id !== id));
   };
 
+  const handleHeadingClick = () => {
+    window.location.reload();
+  };
+
   return (
     <div className="app-container">
-      <h1 className="heading">Profile Explorer</h1>
+  <h1 className="heading clickable" onClick={handleHeadingClick}>Profile Explorer</h1>
 
-      {/* Add Profile Button */}
-      <button onClick={() => setShowAddForm(true)} className="add-profile-btn">
-        Add Profile
-      </button>
-
-      {/* Show Add/Edit Profile Form */}
+  <button onClick={() => setShowAddForm(true)} className="add-profile-btn">
+    Add Profile
+  </button>
       {showAddForm && (
         <div ref={formSectionRef} className="form-container">
           <h2>{isEditing ? 'Edit Profile' : 'Add New Profile'}</h2>
@@ -192,7 +191,6 @@ const App = () => {
         </div>
       )}
 
-      {/* Profile List */}
       <div className="profiles-list">
         {profiles.map((profile) => (
           <div key={profile.id} className="profile-card">
@@ -212,7 +210,6 @@ const App = () => {
         ))}
       </div>
 
-      {/* Display Map of Selected Profile */}
       {selectedProfile && (
         <div ref={mapSectionRef} className="map-container">
           <h2>Location of {selectedProfile.name}</h2>
@@ -229,7 +226,7 @@ const Map = ({ address }) => {
 
   useEffect(() => {
     if (mapRef.current) {
-      mapRef.current.remove(); // Remove the old map instance if any
+      mapRef.current.remove();
     }
 
     if (address.lat && address.lng) {
@@ -237,15 +234,13 @@ const Map = ({ address }) => {
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mapRef.current);
 
-      // Ensure the marker icon URL is correct and the icon size is appropriate
       const customIcon = L.icon({
-        iconUrl: 'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png', // Replace with your marker image URL
-        iconSize: [50, 50],  // Ensure the marker size is large enough to be visible
-        iconAnchor: [25, 50], // Anchor the icon at the bottom center
-        popupAnchor: [0, -50] // Popup position relative to the marker
+        iconUrl: 'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png',
+        iconSize: [50, 50],
+        iconAnchor: [25, 50],
+        popupAnchor: [0, -50]
       });
 
-      // Add the marker with the custom icon
       L.marker([parseFloat(address.lat), parseFloat(address.lng)], { icon: customIcon })
         .addTo(mapRef.current)
         .openPopup();
@@ -256,6 +251,5 @@ const Map = ({ address }) => {
 
   return <div ref={mapContainerRef} className="map"></div>;
 };
-
 
 export default App;
