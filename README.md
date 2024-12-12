@@ -10,8 +10,8 @@ Profile Explorer is a web application designed to provide an interactive and use
 - **Responsive Design**: Fully responsive layout for seamless use on desktops, tablets, and mobile devices.
 - **Data Integration**: Supports integration with APIs or databases for real-time data.
 ## Screenshots
-![Screenshot 2024-12-12 182740](https://github.com/user-attachments/assets/ddf92453-aecc-4cae-b094-19621b245813)
 ![Screenshot 2024-12-12 182716](https://github.com/user-attachments/assets/2c685114-0aef-4963-bca8-0660ab36ba72)
+![Screenshot 2024-12-12 182740](https://github.com/user-attachments/assets/ddf92453-aecc-4cae-b094-19621b245813)
 ![Screenshot 2024-12-12 182751](https://github.com/user-attachments/assets/4fb9e718-f8a5-4f4a-8bca-20f6f6bfa8ff)
 ![image](https://github.com/user-attachments/assets/70e3dc4f-012f-442f-9138-cbe208d6cbb4)
 
