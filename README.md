@@ -49,7 +49,6 @@ Follow these steps to set up and run the project locally:
 ## Technologies Used
 
 - **Frontend**: React.js, Tailwind CSS
-- **Backend**: Node.js (if applicable)
 - **Mapping Library**: Leaflet API
 
 ## Project Structure
