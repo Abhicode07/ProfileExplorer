@@ -13,7 +13,7 @@ Profile Explorer is a web application designed to provide an interactive and use
 
 **First View Of Web Page -**
 
-![Screenshot 2024-12-12 182716](https://github.com/user-attachments/assets/2c685114-0aef-4963-bca8-0660ab36ba72)
+![image](https://github.com/user-attachments/assets/fee921fe-611d-4cff-ae1b-2a13ce806042)
 
 **After Clicking on Summary Button -**
 
